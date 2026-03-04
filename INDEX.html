@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Drielly & Brendon</title>
+
+<style>
+
+body{
+margin:0;
+font-family: 'Georgia', serif;
+background:#f4f4f4;
+color:#4e5f4c;
+text-align:center;
+}
+
+.hero{
+background:white;
+padding:80px 20px;
+}
+
+.logo{
+width:180px;
+margin-bottom:20px;
+}
+
+h1{
+font-size:42px;
+margin:10px;
+}
+
+.data{
+font-size:20px;
+}
+
+.local{
+font-size:18px;
+margin-top:5px;
+}
+
+.contador{
+font-size:24px;
+margin-top:30px;
+font-weight:bold;
+}
+
+section{
+padding:70px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.historia{
+font-size:18px;
+line-height:1.6;
+}
+
+.presentes{
+background:white;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.presente{
+border:1px solid #ddd;
+padding:20px;
+border-radius:10px;
+}
+
+.botao{
+display:inline-block;
+margin-top:10px;
+padding:12px 20px;
+background:#5c7358;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+.pix{
+margin-top:40px;
+font-size:18px;
+}
+
+footer{
+padding:40px;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<img src="logo.png" class="logo">
+
+<h1>Drielly & Brendon</h1>
+
+<div class="data">
+10 de Outubro de 2026
+</div>
+
+<div class="local">
+Cerimonial do Zoca — Colatina
+</div>
+
+<div class="contador" id="contador"></div>
+
+</div>
+
+<section>
+
+<h2>Mensagem dos Noivos</h2>
+
+<p class="historia">
+Estamos contando os dias para celebrar esse momento com você.
+Sua presença tornará esse dia ainda mais especial para nós.
+</p>
+
+</section>
+
+<section>
+
+<h2>Local do Casamento</h2>
+
+<p>
+Cerimonial do Zoca<br>
+Colatina - ES
+</p>
+
+<iframe
+src="https://maps.google.com/maps?q=Cerimonial%20do%20Zoca%20Colatina&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="300"
+style="border:0;border-radius:10px;">
+</iframe>
+
+</section>
+
+<section class="presentes">
+
+<h2>Lista de Presentes</h2>
+
+<p>
+Se desejar nos presentear, criamos algumas experiências simbólicas
+para nossa nova jornada juntos.
+</p>
+
+<div class="grid">
+
+<div class="presente">
+🍷 Jantar romântico<br>
+<strong>R$150</strong><br>
+<a class="botao" href="#">Presentear</a>
+</div>
+
+<div class="presente">
+✈️ Passeio na viagem<br>
+<strong>R$300</strong><br>
+<a class="botao" href="#">Presentear</a>
+</div>
+
+<div class="presente">
+🏨 Noite de hotel<br>
+<strong>R$500</strong><br>
+<a class="botao" href="#">Presentear</a>
+</div>
+
+<div class="presente">
+🌅 Experiência especial<br>
+<strong>R$800</strong><br>
+<a class="botao" href="#">Presentear</a>
+</div>
+
+</div>
+
+<div class="pix">
+
+Ou se preferir presentear via Pix:
+
+<br><br>
+
+<strong>27999960272</strong>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Confirmação de Presença</h2>
+
+<p>
+Em breve disponibilizaremos a confirmação online.
+</p>
+
+</section>
+
+<footer>
+
+Com carinho<br><br>
+Drielly & Brendon
+
+</footer>
+
+<script>
+
+const dataCasamento = new Date("Oct 10, 2026 00:00:00").getTime();
+
+const contador = setInterval(function(){
+
+const agora = new Date().getTime();
+
+const distancia = dataCasamento - agora;
+
+const dias = Math.floor(distancia / (1000*60*60*24));
+
+document.getElementById("contador").innerHTML =
+"Faltam " + dias + " dias para o nosso grande dia";
+
+},1000);
+
+</script>
+
+</body>
+</html>
